@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:48:58 by ageiser           #+#    #+#             */
-/*   Updated: 2022/09/27 13:16:33 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/09/27 15:50:02 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@ int	main(void)
 {
 //	int c = 'c';
 //	unsigned char c = 'a';
-//	const char str[] = "";
+	const char str[] = "+44";
 //	char b[] = "";
 //	char s[] = "turlucutu";
 //	const char	s1[] = "acddef";
 //	const char	s2[] = "abcdef";
 //	char dst[] =       "         is my boat";
 //	const char src[] = "Pleiades";
-	size_t len = 3;
+//	size_t len = 6;
 //	size_t n = 3;
 //	size_t dstsize = 29;
-	const char haystack[] = "Pleiades";
-	const char needle[] = "ia";	
+//	const char haystack[] = "Pleiades";
+//	const char needle[] = "ia";	
 //printf("c = %c\n", c);	
 //printf("isalpha %c = %d\n", c, ft_isalpha(c));
 //printf("isdigit bool c = %d\n", ft_isdigit(c));
@@ -78,10 +78,10 @@ int	main(void)
 //printf("memchr: %s\n", ft_memchr(s, c, n));
 //printf("string1: %s\nstring2: %s\n", s1, s2);
 //printf("memcmp: %d\n", ft_memcmp(s1, s2, n));
-printf("haystack: %s\nneedle: %s\nsize_t: %zu\n", haystack, needle, len);
-printf("strnstr : %s\n", ft_strnstr(haystack, needle, len));
-//printf("str : %s\n", str);i
-//printf("atoi: %d\n", ft_atoi(str));
+//printf("haystack: %s\nneedle: %s\nsize_t: %zu\n", haystack, needle, len);
+//printf("strnstr : %s\n", ft_strnstr(haystack, needle, len));
+printf("str : %s\n", str);
+printf("atoi: %d\n", ft_atoi(str));
 
 return(0);
 }

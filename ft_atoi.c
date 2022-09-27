@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:50:06 by ageiser           #+#    #+#             */
-/*   Updated: 2022/09/26 14:50:57 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/09/27 16:36:56 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,33 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int negative;
-	unsigned long long result;
+	int					i;
+	int					negative;
+	int					result;
 
 	i = 0;
-	negative = 0;
+	negative = 1;
 	result = 0;
-	if (!str)
-		return (0);
 	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f'
 		|| str[i] == '\r' || str[i] == ' ')
-	i++;
+		i++;
 	if (str[i] == '-')
+	{
 		negative = -1;
-	else 
-		negative = 1;
-	if (str[i] == '-' || str[i] == '+')
-	i++;
-while (str[i] >= '0' && str[i] <= '9')
-{
-	if (result > __LONG_LONG_MAX__)
-	return(negative == -1 ? 0 : -1);
-result *= 10;
-result += (str[i] - '0');
-i++;
+		i++;
+	}
+	else if (str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+			result = result * 10 + str[i] - '0';
+			i++;
+	}	
+	return (result * negative);
 }
-return (result * negative);
-}
+/*
+ligne 34:    tant qu'on a un digit
+ligne 36:    result = (0 * 10) + val ascii premier digit - val ascii 0
+exemple(45)  result = (0 * 10) +         52              -    48       result = 4
+			 result = (4 * 10) +         53              -    48       result = 45
+*/
