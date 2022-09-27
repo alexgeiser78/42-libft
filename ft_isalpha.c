@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:19:49 by ageiser           #+#    #+#             */
-/*   Updated: 2022/09/20 15:32:28 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/09/26 15:01:24 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,4 @@ int	ft_isalpha(int c)
 		return (c);
 	else
 		return (0);
-}	
+}

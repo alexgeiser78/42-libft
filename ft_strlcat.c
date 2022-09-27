@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 17:01:35 by ageiser           #+#    #+#             */
-/*   Updated: 2022/09/21 13:28:38 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/09/26 19:13:26 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,20 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i++;
 	if (dstsize < i)
 	{
-		while (src[j])
+		while (src[j] != '\0')
 		j++;
 		return (dstsize + j);
 	}
-	while (dstsize > 0 && i < dstsize -1 && src[j])
-		dst[i++] = src[j++];
+	while (dstsize > 0 && i < dstsize -1 && src[j] != '\0')
+	{	
+		dst[i] = src[j];
+		i++;
+		j++;
+	}
 		dst[i] = '\0';
-	while (src[j++])
-				i++;
+	while (src[j++] != '\0')
+	{
+		i++;
+	}
 	return (i);
 }
