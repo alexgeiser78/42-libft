@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:48:58 by ageiser           #+#    #+#             */
-/*   Updated: 2022/09/27 15:50:02 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/09/28 12:58:28 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ int	main(void)
 
 {
 //	int c = 'c';
+//	int i;
+//	i = 0;
 //	unsigned char c = 'a';
-	const char str[] = "+44";
+//	const char str[] = "+44";
 //	char b[] = "";
 //	char s[] = "turlucutu";
 //	const char	s1[] = "acddef";
@@ -28,6 +30,9 @@ int	main(void)
 //	size_t len = 6;
 //	size_t n = 3;
 //	size_t dstsize = 29;
+//	size_t count = 5;
+//	size_t size = 20;
+//	void *= NULL;
 //	const char haystack[] = "Pleiades";
 //	const char needle[] = "ia";	
 //printf("c = %c\n", c);	
@@ -80,8 +85,20 @@ int	main(void)
 //printf("memcmp: %d\n", ft_memcmp(s1, s2, n));
 //printf("haystack: %s\nneedle: %s\nsize_t: %zu\n", haystack, needle, len);
 //printf("strnstr : %s\n", ft_strnstr(haystack, needle, len));
-printf("str : %s\n", str);
-printf("atoi: %d\n", ft_atoi(str));
-
+//printf("str : %s\n", str);
+//printf("atoi: %d\n", ft_atoi(str));
+/*
+int i;
+int *ptr;
+size_t count;
+size_t size;
+i = 0;
+count = 20;
+size = 1;
+printf("calloc count: %zu\nsize: %zu\n", count, size);
+	ft_calloc(count, size);
+for(i = 0; (size_t)i < count; i++)	
+printf("[%d] ", *ptr);
+*/
 return(0);
 }
