@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:48:58 by ageiser           #+#    #+#             */
-/*   Updated: 2022/09/28 16:31:28 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/09/28 13:37:22 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@ int	main(void)
 
 {
 //	int c = 'c';
-//	int i = 0;
+//	int i;
+//	i = 0;
 //	unsigned char c = 'a';
 //	const char str[] = "+44";
 //	char b[] = "";
 //	char s[] = "turlucutu";
-	const char	s[]  = "Pleiades";
-//	const char	s1[] = "Pleiades";
+	const char	s1[] = "Pleiades";
 //	const char	s2[] = "abcdef";
 //	char dst[] =       "         is my boat";
 //	const char src[] = "Pleiades";
-	size_t len = 6;
+//	size_t len = 6;
 //	size_t n = 3;
 //	size_t dstsize = 29;
 //	size_t count = 5;
-//	size_t size = 20;i
+//	size_t size = 20;
 //	void *= NULL;
 //	const char haystack[] = "Pleiades";
 //	const char needle[] = "ia";	
@@ -101,11 +101,8 @@ printf("calloc count: %zu\nsize: %zu\n", count, size);
 for(i = 0; (size_t)i < count; i++)	
 printf("[%d] ", *ptr);
 */
-/* STRDUP
+
 printf("origin %s\n", s1);
-printf("copied %s\n", ft_strdup(s1));
-*/
-printf("origin %s\n", s);
-printf("copied %s\n", (ft_substr(s, start, len));
+printf("copied %s\n", ft_strdup(s1));	
 return(0);
 }

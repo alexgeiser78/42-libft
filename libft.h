@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 12:27:24 by ageiser           #+#    #+#             */
-/*   Updated: 2022/09/28 16:16:32 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/09/28 13:08:51 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ int		ft_atoi(const char *str);
 //
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
-//
-char 	*ft_substr(char const *s, unsigned int start, size_t len);
+
 /*
+ft_substr
 ft_strjoin
 ft_strtrim
 ft_split
