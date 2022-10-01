@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 12:27:24 by ageiser           #+#    #+#             */
-/*   Updated: 2022/09/29 13:07:28 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:46:21 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,10 @@ char	*ft_strdup(const char *s1);
 //
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
-/*ft_strtrim
+char	*ft_strtrim(char const *s1, char const *set);
+/*
 ft_split
-ft_itoa
+ift_itoa
 ft_strmapi
 ft_striteri
 ft_putchar_fd
