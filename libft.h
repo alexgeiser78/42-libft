@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 12:27:24 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/01 13:02:39 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/10/02 12:54:44 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 /*
-ift_itoa
 ft_strmapi
 ft_striteri
 ft_putchar_fd
