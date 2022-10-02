@@ -6,12 +6,19 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:48:58 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/02 13:57:48 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/10/02 17:57:53 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+
+char ft_faischier(char c)
+{ 
+	c[] = "Ta gueule";
+c = c -32;
+retour(c);
+}
 
 int	main(void)
 
@@ -138,11 +145,18 @@ while (i < 4)
 	i++;
 }
 */
+/*    ITOA
 int n;
 n = -38938475;
 
 printf("n = %d\n", n);
 printf("itoa %s\n", ft_itoa(n));
+*/
+
+char const s[] = "Pleiades is my boat";
+printf("s: %s\n", s);
+printf("s: %s\n", ft_strmapi(s, ft_faischier));
+
 return(0);
 
 }
