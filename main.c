@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:48:58 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/01 12:09:51 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/10/01 17:23:14 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,13 +117,27 @@ printf("s1: %s\n", s1);
 printf("s2: %s\n", s2);
 printf("strjoin: %s\n", ft_strjoin(s1, s2)); 	
 */
-	
+/*      STRTRIM	
 char const s1[] = "#Pleiades!";
 char const set[]  = "#!";
 printf("s1: %s\n", s1);
 printf("set: %s\n", set);
 printf("result: %s\n", ft_strtrim(s1, set));
-
+*/
+/*      SPLIT	
+char **array;
+char const s[] = "Pleiades is my boat";
+char c = ' ';
+int i = 0;
+printf("s: %s\nc: %c\n", s, c);
+array = ft_split(s, c);
+printf("result: %s\n", *ft_split(s, c)); //retourne un pointeur sur le premier tableau
+while (i < 4)
+{
+	printf("mot [%d] = %s\n", i, array[i]);
+	i++;
+}
+*/
 return(0);
 
 }
