@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 16:20:38 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/02 17:58:43 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/10/03 13:07:26 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 //ligne 15 fonction avec pointeur de fonction (*f) avec char comme 
-//retour et (unsigned int, et char) comme argument
+//retour et (unsigned int, et char) comme parametre
+//ligne 25 creation du malloc
+//ligne 30 a chaque caractere de str, on applique la fonction (f)
+//ligne 33 fin de chaine

@@ -6,19 +6,14 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:48:58 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/02 17:57:53 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/10/03 13:01:06 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-char ft_faischier(char c)
-{ 
-	c[] = "Ta gueule";
-c = c -32;
-retour(c);
-}
+
 
 int	main(void)
 
@@ -152,11 +147,24 @@ n = -38938475;
 printf("n = %d\n", n);
 printf("itoa %s\n", ft_itoa(n));
 */
+/*    STRMAPI
+static char	funk(unsigned int i,char c)
+{
+	i = 0;
+	if ( c >= 65 && c <=90)
+		c = c + 32;
+		i++;
+	return(c);
+}
+int main(void)
+{	
+char const s[] = "PLEIADES IS MY  BOAT";
 
-char const s[] = "Pleiades is my boat";
 printf("s: %s\n", s);
-printf("s: %s\n", ft_strmapi(s, ft_faischier));
+printf("s: %s\n", ft_strmapi(s, funk));
 
 return(0);
-
+}
+*/
+return(0);
 }
