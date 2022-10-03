@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 12:27:24 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/02 16:11:53 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/10/03 13:13:21 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-/*
-ft_striteri
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+/*  
 ft_putchar_fd
 ft_putstr_fd
 ft_putendl_fd

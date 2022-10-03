@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:48:58 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/03 13:01:06 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/10/03 14:01:08 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 
 
-int	main(void)
+//int	main(void)
 
-{
+//{
 //	int c = 'c';
 //	int i = 0;
 //	unsigned char c = 'a';
@@ -166,5 +166,20 @@ printf("s: %s\n", ft_strmapi(s, funk));
 return(0);
 }
 */
+static void	funk2(unsigned int i, char *c)
+{
+	i = 0;
+	
+	if ((int)c >= 65 && (int)c <= 90)
+		c = c + 32;
+		i++;
+//	return (c);
+}
+int main(void)
+{
+	char s[] = "PLEIADES IS MY BOAT";
+printf("s: %s\n", s);
+ft_striteri(s, funk2);
+printf("s: %s\n", s);
 return(0);
 }
