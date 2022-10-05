@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   _ft_puendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 14:50:29 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/05 09:56:08 by ageiser          ###   ########.fr       */
+/*   Created: 2022/10/03 16:09:43 by ageiser           #+#    #+#             */
+/*   Updated: 2022/10/03 16:20:26 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] != '\0' && s2[i] != '\0' && i < n)
+	if (s == NULL)
+		return ;
+	while (s[i] != '\0')
 	{
-		if (s1[i] == s2[i])
-		{
-			i++;
-		}
-		else
-		{
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		}
+		write(fd, &s[i], 1);
+		i++;
 	}
-	if (i == n)
-		return (0);
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	write(fd, "\n", 1);
 }

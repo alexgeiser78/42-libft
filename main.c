@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:48:58 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/03 14:01:08 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/10/05 13:06:40 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,7 +165,8 @@ printf("s: %s\n", ft_strmapi(s, funk));
 
 return(0);
 }
-*/
+*/     
+/*     STRITERI  
 static void	funk2(unsigned int i, char *c)
 {
 	i = 0;
@@ -183,3 +184,14 @@ ft_striteri(s, funk2);
 printf("s: %s\n", s);
 return(0);
 }
+*/
+
+int main(void)
+{
+	char c = 'e';
+	int fd = test_fd;
+	ft_putchar_fd(fd, &c, 1); 
+}	
+
+
+

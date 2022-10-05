@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 14:50:29 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/05 09:56:08 by ageiser          ###   ########.fr       */
+/*   Created: 2022/10/05 11:41:07 by ageiser           #+#    #+#             */
+/*   Updated: 2022/10/05 12:49:22 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	unsigned int	i;
+	t_list	*pleiades;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] != '\0' && s2[i] != '\0' && i < n)
-	{
-		if (s1[i] == s2[i])
-		{
-			i++;
-		}
-		else
-		{
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		}
-	}
-	if (i == n)
-		return (0);
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-}
+	pleiades = (t_list *)malloc(sizeof(*pleiades));
+	if (!pleiades)
+		return (NULL);
+	pleiades->content = content;
+	pleiades->next = NULL;
+	return (pleiades);
+}	
