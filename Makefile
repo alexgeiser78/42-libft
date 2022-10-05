@@ -6,7 +6,7 @@
 #    By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/15 11:26:03 by ageiser           #+#    #+#              #
-#    Updated: 2022/10/05 13:30:56 by ageiser          ###   ########.fr        #
+#    Updated: 2022/10/05 13:58:56 by ageiser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #nom de sortie:
@@ -45,7 +45,7 @@ INCLUDE = libft.h
 OBJ = $(SRC:.c=.o)
 
 #nom des fichiers bonus a compiler
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstlast.c
 
 #les bonus obj seront les sources en .c qui deviendraont des .o pour les bonus
 BONUS_OBJ = $(BONUS:.c=.o)
