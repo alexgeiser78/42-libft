@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:46:04 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/05 16:01:01 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/10/06 13:19:24 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,5 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
+//ligne 21 application de la fonction sur l'element
+//ligne 22 on se deplace d'un element

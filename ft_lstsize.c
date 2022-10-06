@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 13:31:14 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/05 13:41:59 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/10/06 12:12:51 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,5 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }	
+//ligne 22 le pointeur lst = adresse pointeur vers next tant 
+//qu'il n-arrive pas a NULL

@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:48:58 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/05 13:06:40 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/10/06 13:41:43 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,13 +185,33 @@ printf("s: %s\n", s);
 return(0);
 }
 */
-
+/*
 int main(void)
 {
 	char c = 'e';
 	int fd = test_fd;
 	ft_putchar_fd(fd, &c, 1); 
 }	
+*/
+
+void print_list (t_list *lst)
+{
+	if (lst)
+{
+	printf("[%s]\n ",lst-> content);
+}
+
+}
+
+int main (void)
+
+{
+   t_list *lst;
+
+	lst = ft_lstnew("Hola");   
+print_list(lst);
+
+}
 
 
 

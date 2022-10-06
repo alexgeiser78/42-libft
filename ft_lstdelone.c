@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:35:41 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/05 15:41:03 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/10/06 12:43:47 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 		free(lst);
 	}
 }
+//ligne 21 (*del) adresse de la fonction qui permet de supprimer le
+//contennu de l'element
+//ligne 22 liberation du malloc
