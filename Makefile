@@ -6,13 +6,11 @@
 #    By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/15 11:26:03 by ageiser           #+#    #+#              #
-#    Updated: 2022/10/06 16:07:14 by ageiser          ###   ########.fr        #
+#    Updated: 2022/10/07 11:55:04 by ageiser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #nom de sortie:
 NAME = libft.a
-
-BNUS = .bonus
 
 #nom des fichiers a compiler:
 SRC =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
@@ -48,7 +46,7 @@ OBJ = $(SRC:.c=.o)
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstlast.c \
 		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-#les bonus obj seront les sources en .c qui deviendraont des .o pour les bonus
+#les bonus obj seront les sources en .c qui deviendront des .o pour les bonus
 BONUS_OBJ = $(BONUS:.c=.o)
 
 #commande principale
@@ -57,7 +55,7 @@ all : $(NAME)
 #commande lors de NAME
 # $@ = liste des arguments passes au script
 # $? = derniere modification
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(INCLUDE)
 	$(LIB) $@ $?
 
 #transformation des .c en .o
