@@ -6,7 +6,7 @@
 #    By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/15 11:26:03 by ageiser           #+#    #+#              #
-#    Updated: 2022/10/10 12:49:11 by ageiser          ###   ########.fr        #
+#    Updated: 2022/10/10 13:54:33 by ageiser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,10 +35,10 @@ RM = rm -f
 CC = gcc
 
 # cree et maintient les archives de la bibliotheques (man ar
-# r = insere les fichiers memebres dans l-archive
+# r = insere les fichiers membres dans l-archive
 # c cree l-archive
 # s ecrit un objet a l-index des fichiers
-LIB = ar rcs
+LIB = ar -rcs
 
 #include le fichier libft.h
 INCLUDE = libft.h
@@ -79,13 +79,15 @@ fclean: clean
 # commande principale + fclean
 re: fclean all
 
+#bonus: $(BNS)
 
 #commande principale des bonus
-#@touch permet de modifier libtf.a et ainsi regenerer un libft.a lor de la
+#@touch permet de modifier libtf.a et ainsi regenerer un libft.a lors de la
 #compilation
-bonus: $(OBJ) $(BONUS_OBJ)
+bonus: $(OBJ) $(BONUS_OBJ) $(INCLUDE)
+		$(LIB) $(NAME) $(OBJ) $(BONUS_OBJ) 
 		@touch $@
-		$(LIB) $(NAME) $(OBJ) $(BONUS_OBJ)
 
-#.PHONY indique ce qui ne creera pas un fichier
+
+#.PHONY indique ce qui ne creera pas un fichier et regarde si il existe deja
 .PHONY: clean fclean all re
