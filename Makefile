@@ -6,9 +6,13 @@
 #    By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/15 11:26:03 by ageiser           #+#    #+#              #
-#    Updated: 2022/10/10 11:15:10 by ageiser          ###   ########.fr        #
+#    Updated: 2022/10/10 12:49:11 by ageiser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+#on pourra creer la <cible> :si les <dependences> sont satisfaites
+#et depuis les dependances pour faire cette transformtion on tape la <commande>
+
 #nom de sortie:
 NAME = libft.a
 
@@ -53,13 +57,13 @@ BONUS_OBJ = $(BONUS:.c=.o)
 all : $(NAME)
 
 #commande lors de NAME
-# $@ = liste des arguments passes au script
-# $? = derniere modification
+# $@ = nom cible
+# $? = liste des dependances plus recentes que la cible
 $(NAME): $(OBJ) $(INCLUDE)
 	$(LIB) $@ $?
 
-#transformation des .o en .c
-#gcc -Wall... (-c compile without linking) ($< nom de la premiere dependence) (-o outuput)($@ fichier de sortie)
+#transformation des .c en .o 
+#gcc -Wall... (-c (cible) $< nom de la premiere dependence, donc .c) (-o (outuput))($@ nom cible)
 %.o: %.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -75,11 +79,13 @@ fclean: clean
 # commande principale + fclean
 re: fclean all
 
+
 #commande principale des bonus
-#@touch modifie seulement les derniers changements
+#@touch permet de modifier libtf.a et ainsi regenerer un libft.a lor de la
+#compilation
 bonus: $(OBJ) $(BONUS_OBJ)
 		@touch $@
 		$(LIB) $(NAME) $(OBJ) $(BONUS_OBJ)
 
-#.PHONY indique ce qui n'est pas un nom de fichier
+#.PHONY indique ce qui ne creera pas un fichier
 .PHONY: clean fclean all re
