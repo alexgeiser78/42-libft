@@ -6,7 +6,7 @@
 #    By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/15 11:26:03 by ageiser           #+#    #+#              #
-#    Updated: 2022/10/10 13:54:33 by ageiser          ###   ########.fr        #
+#    Updated: 2022/10/10 14:20:43 by ageiser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,14 +36,14 @@ CC = gcc
 
 # cree et maintient les archives de la bibliotheques (man ar
 # r = insere les fichiers membres dans l-archive
-# c cree l-archive
-# s ecrit un objet a l-index des fichiers
+# c cree l'archive
+# s ecrit un objet a l'index des fichiers
 LIB = ar -rcs
 
 #include le fichier libft.h
 INCLUDE = libft.h
 
-#les obj seront les sources en .c qui deviendraoont des .o
+#les obj seront les sources en .c qui deviendront des .o
 OBJ = $(SRC:.c=.o)
 
 #nom des fichiers bonus a compiler
@@ -78,8 +78,6 @@ fclean: clean
 
 # commande principale + fclean
 re: fclean all
-
-#bonus: $(BNS)
 
 #commande principale des bonus
 #@touch permet de modifier libtf.a et ainsi regenerer un libft.a lors de la
