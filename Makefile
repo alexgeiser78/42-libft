@@ -6,7 +6,7 @@
 #    By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/15 11:26:03 by ageiser           #+#    #+#              #
-#    Updated: 2022/10/07 11:55:04 by ageiser          ###   ########.fr        #
+#    Updated: 2022/10/10 11:15:10 by ageiser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #nom de sortie:
@@ -58,11 +58,12 @@ all : $(NAME)
 $(NAME): $(OBJ) $(INCLUDE)
 	$(LIB) $@ $?
 
-#transformation des .c en .o
-%.o: %.c
-	$(CC) -c $(CFLAGS) $?
+#transformation des .o en .c
+#gcc -Wall... (-c compile without linking) ($< nom de la premiere dependence) (-o outuput)($@ fichier de sortie)
+%.o: %.c $(INCLUDE)
+	$(CC) $(CFLAGS) -c $< -o $@
 
-#commande effacement des .o
+#commande effacement des .o:
 clean:
 	$(RM) $(OBJ) $(BONUS_OBJ)
 
@@ -81,4 +82,4 @@ bonus: $(OBJ) $(BONUS_OBJ)
 		$(LIB) $(NAME) $(OBJ) $(BONUS_OBJ)
 
 #.PHONY indique ce qui n'est pas un nom de fichier
-.PHONY: clean fclean all re bonus
+.PHONY: clean fclean all re

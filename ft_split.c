@@ -6,7 +6,7 @@
 /*   By: ageiser <ageiser@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 13:07:55 by ageiser           #+#    #+#             */
-/*   Updated: 2022/10/07 12:25:46 by ageiser          ###   ########.fr       */
+/*   Updated: 2022/10/07 15:57:23 by ageiser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,67 +32,75 @@ static int	count_words(const char *str, char c)
 	}
 	return (i);
 }	
-//ligne 15 fonction qui compte le nombre de (c) et cree des 
-//[ ] sur chaque (str++). Utilise pour le malloc de la fonction principale
+//ligne 15 fonction qui compte le nombre de (c)
+//Utilise pour le malloc de la fonction principale
 
-static char	*word_dup(const char *str, int start, int finish)
+static char	**freemalloc(char **str, size_t index)
 {
-	char	*word;
-	int		i;
+	while (index-- > 0)
+		free(str[index]);
+	free(str);
+	return (0);
+}	
+
+//ligne 15 fonctoin qui permet de liberer le malloc en cas de 
+//disfonctionnement
+//ligne 40 tant que index est plus grand que 0
+//ligne 41 on libere ce qu'il y a dans le pointeur str et on se
+//deplace d'une case
+//ligne 42 on libere le malloc principal
+
+static char	**pointerwriter(char **str, char const *s, char c)
+{
+	size_t	i;
+	size_t	j;
+	size_t	index;
 
 	i = 0;
-	word = malloc(sizeof(char) * (finish - start + 1));
-	if (!word)
-		return (NULL);
-	while (start < finish)
-		word[i++] = str[start++];
-	word[i] = '\0';
-	return (word);
-}
-// ligne 38 fonction avec pointeur de duplicage de mot(*pointeur sur chaine 
-// de caractere, index de la fonction ft_split, i de la fonction ft_split). 
-// sert a ecrire le mot dans fonction principale
-// ligne 44 malloc de taille d'un (char * difference entre finish et 
-// start +1) pour chaque mot
+	j = 0;
+	index = 0;
+	while (s[i])
+	{
+		if (s[i] == c && s[i + 1] != c)
+			j = i + 1;
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+		{
+			str[index] = ft_substr(s, j, i - j + 1);
+			if (!str[index])
+			{
+				return (freemalloc(str, index));
+			}
+			index++;
+		}
+		i++;
+	}
+	return (str);
+}	
+
+//ligne 53 fonction qui ecrit les mots dans les pointeurs
+//ligne 62 tant qu'on est dans le string original
+//ligne 64 si s[i] correspont au caractere (c) et que s[i + 1] est 
+//different du caractere (c)
+//ligne 65 j = i + 1
+//ligne 66 si s[i] est different de c et que s[i + 1] egale (c) ou s[i +1] =
+//fin de chaine
+//ligne 68 le double pointeur str[index] = fonction copie (string de depart, 
+//[i] de depart, longueur)
+//ligne 69, si le malloc n'a pas fonctionne, free malloc
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
-	int		index;
 	char	**split;
 
-	split = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	split = ft_calloc(sizeof(char *), (count_words(s, c) + 1));
 	if (!s || !split)
 		return (0);
-	i = 0;
-	j = 0;
-	index = -1;
-	while (i <= ft_strlen(s))
-	{
-		if (s[i] != c && index < 0)
-			index = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
-		{
-		split[j] = word_dup(s, index, i);
-		index = -1;
-		j++;
-		}
-	i++;
-	}
-split[j] = NULL;
+	split = pointerwriter(split, s, c);
 	return (split);
 }
-//ligne 56 fonction pointeur de pointeur [ ] [ ]
-//ligne 61 creation d'un pointeur de pointeur
-//ligne 63 allocation de la memoire de taille d'un 
-//pointeur de char * (nbre de mot +1)
-//ligne 69 tant que i est plus petit ou egal a la longueur de (s)
-//ligne 71 si la chaine a l'indice i != caracter de coupure et index < 0
-//ligne 72 index = i
-//ligne 79 i++ jusqu'a ce que 
-//linge 73 s[i] == caractere ou que ( i == strlen(s) et index >= 0)
-//ligne 75 split a l'indice [j] = resultat de la fonction word-dup
-//ligne 76 l-indice retourne a -1 pour refaire la boucle while
-//ligne 75 ecriture de split j
-//ligne 81 rajout de fin de chaine 
+//ligne 91 fonction finale
+//ligne 93 creation du double poiteur de sortie  	[]
+//													[]
+//ligne 95 creation du nombre de malloc de sortie
+//ligne 98 ecriture des doubles pointeurs
+//ligne 99 retour 	
